@@ -1,0 +1,24 @@
+<view class='logo'>
+    <image src="../../images/index/logo.png"></image>
+</view>
+<view class="brand">
+    <view>
+        <text>对接持牌资产管理公司优质资产</text>
+    </view>
+    <view>
+        <text>为机构理财助力</text>
+    </view>
+</view>
+<view class="user"><input placeholder="请输入您的账号"  /></view>
+<view class='pwd'><input placeholder="请输入您的密码"  /></view>
+<view class="forget-pwd">
+	<text>忘记密码</text>
+</view>
+<view class="btn">
+	<button>登录</button>
+</view>
+<view class="register">
+	<text>没有账号? 立即注册</text>
+</view>
+
+<view class="bg"><image src='../../images/index/bg.jpg'></image></view>

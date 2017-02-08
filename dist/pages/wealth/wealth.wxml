@@ -1,0 +1,22 @@
+<view class="menu">
+    <view class="item wealth">
+        <view class="icon"></view>
+        <view class="text">我的资产</view>
+    </view>
+    <view class="item product">
+        <view class="icon"></view>
+        <view class="text">产品列表</view>
+    </view>
+    <view class="item trade">
+        <view class="icon"></view>
+        <view class="text">交易记录</view>
+    </view>
+    <view class="item point">
+        <view class="icon"></view>
+        <view class="text">爱心值</view>
+    </view>
+    <view class="item system">
+        <view class="icon"></view>
+        <view class="text">系统管理</view>
+    </view>
+</view>

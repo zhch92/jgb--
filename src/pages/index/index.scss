@@ -1,0 +1,114 @@
+$themeColor:#f9bb18;
+page {
+    background: #ededed;
+}
+
+.logo {
+    width: 280rpx;
+    height: 90rpx;
+    margin: 0 auto;
+    padding: 50rpx 0;
+    image {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.brand {
+    padding: 0 20rpx;
+    margin-bottom: 120rpx;
+    view {
+        text-align: center;
+        margin-bottom: 20rpx;
+    }
+    text {
+        color: #1b65ce;
+    }
+}
+
+.user,
+.pwd {
+    padding: 10rpx 0;
+    width: 480rpx;
+    margin: 0 auto;
+    border: none;
+    border-bottom: 1px solid #1b65ce;
+    background: transparent;
+    border-radius: 0;
+    font-size: 30rpx;
+    margin-bottom: 40rpx;
+    position: relative;
+    input {
+        padding: 0 10rpx;
+    }
+    .eye {
+        z-index: 99;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: url(../../images/index/eye-open.png) no-repeat center;
+        background-size: 30px 24px;
+    }
+    .eye-no {
+        z-index: 99;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: url(../../images/index/eye-close.png) no-repeat center;
+        background-size: 30px 11px;
+    }
+}
+
+.forget-pwd {
+    text-align: right;
+    margin: 0 auto 40rpx;
+    width: 480rpx;
+    navigator {
+        font-size: 26rpx;
+    }
+}
+
+.btn {
+    margin-bottom: 40rpx;
+    button {
+        width: 480rpx;
+        height: 80rpx;
+        color: #1b65ce;
+        font-size: 30rpx;
+        border: 2rpx solid #1b65ce;
+        border-radius: 35rpx;
+        background-color: transparent;
+    }
+}
+
+.register {
+    text-align: right;
+    margin: 0 auto 20rpx;
+    width: 480rpx;
+    text {
+        font-size: 26rpx;
+    }
+    navigator {
+        font-size: 30rpx;
+        color: #fb565c;
+        display: inline-block;
+    }
+}
+
+.bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    image {
+        width: 100%;
+        height: 100%;
+        opacity: .35;
+    }
+}

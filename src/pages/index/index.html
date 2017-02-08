@@ -1,0 +1,39 @@
+<view class='logo'>
+    <image src="../../images/index/logo.png"></image>
+</view>
+<view class="brand">
+    <view>
+        <text>对接持牌资产管理公司优质资产</text>
+    </view>
+    <view>
+        <text>为机构理财助力</text>
+    </view>
+</view>
+<view class="user"><input placeholder="请输入您的账号" id='user' bindinput="bindUser" /></view>
+<block wx:if="{{eye}}">
+	<view class='pwd'><input  value="{{pwd}}" placeholder="请输入您的密码" bindinput="bindPwd" id='pwd' />
+
+<view  class="eye" bindtap='switchEye'></view>
+</view>
+
+</block>
+<block wx:else>
+	<view class='pwd'><input password value="{{pwd}}" placeholder="请输入您的密码" bindinput="bindPwd" id='pwd' />
+
+<view  class="eye-no"  bindtap='switchEye'></view>
+</view>
+</block>
+
+
+
+<view class="forget-pwd">
+	<navigator url="../forgetpwd/forgetpwd" hover-class="none">忘记密码</navigator>
+</view>
+<view class="btn">
+	<button bindtap='login'>登录</button>
+</view>
+<view class="register">
+	<text>没有账号? </text><navigator url="../register/register" hover-class="none">立即注册</navigator>
+</view>
+
+<view class="bg"><image src='../../images/index/bg.jpg'></image></view>

@@ -1,0 +1,19 @@
+{
+    "pages": [
+        
+        "pages/wealth/wealth",
+        "pages/index/index",
+        "pages/register/register",
+        "pages/agreement/agreement",
+        "pages/forgetpwd/forgetpwd"
+
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#1b65ce",
+        "navigationBarTitleText": "机构宝-登录",
+        "navigationBarTextStyle": "#ffffff",
+        "disableScroll": "false"
+    }
+
+}

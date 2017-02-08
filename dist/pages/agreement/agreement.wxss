@@ -1,0 +1,22 @@
+page {
+  background: #ffffff; }
+
+.title {
+  color: #1b65ce;
+  text-align: center;
+  padding: 30rpx;
+  font-size: 46rpx; }
+
+.page {
+  padding: 5rpx 40rpx;
+  font-size: 36rpx;
+  margin: 10rpx 0; }
+
+.text {
+  padding: 0rpx 40rpx;
+  color: #333333;
+  font-size: 26rpx;
+  line-height: 1rem;
+  text-indent: 40rpx; }
+  .text.text:last-child {
+    padding-bottom: 40rpx; }
