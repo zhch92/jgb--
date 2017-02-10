@@ -1,0 +1,36 @@
+$themeColor:#f9bb18;
+page {
+    background: #f2f2f2;
+    // padding-left: 20rpx;
+    // width: auto;
+}
+.row{
+    border-bottom: 2rpx solid #ddd;
+    padding: 20rpx 20rpx;
+    background:#fff;
+    font-size: 36rpx;
+    .name{
+        color:#fb565c;
+        margin-left: 5px;
+    }
+    picker,.wrap{
+        display: inline-block;
+    }
+    input{
+        display: inline-block;
+        // background:red;
+        vertical-align: middle;
+        padding: 0 10rpx;
+    }
+}
+.hint{
+    font-size: 30rpx;
+    color: #666;
+    line-height: 45rpx;
+    text{
+        color: #1b65ce;
+    }
+}
+button{
+    margin-top: 20px;
+}

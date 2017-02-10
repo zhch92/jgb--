@@ -1,7 +1,13 @@
 {
     "pages": [
-        
+
+        "pages/order/order",
+        "pages/product/product",
         "pages/wealth/wealth",
+
+        "pages/trade/trade",
+        "pages/point/point",
+        "pages/system/system",
         "pages/index/index",
         "pages/register/register",
         "pages/agreement/agreement",
@@ -14,6 +20,40 @@
         "navigationBarTitleText": "机构宝-登录",
         "navigationBarTextStyle": "#ffffff",
         "disableScroll": "false"
-    }
+    },
+    "tabBar": {
+        "color": "#666",
+        "selectedColor": "#1b65ce",
+        "borderStyle": "white",
+        "backgroundColor": "#ffffff",
+        "list": [{
+                "pagePath": "pages/wealth/wealth",
+                "iconPath": "images/account/index/wealth.png",
+                "selectedIconPath": "images/account/index/wealth-a.png",
+                "text": "我的资产"
+            },{
+                "pagePath": "pages/product/product",
+                "iconPath": "images/account/index/product.png",
+                "selectedIconPath": "images/account/index/product-a.png",
+                "text": "产品列表"
+            }, {
+                "pagePath": "pages/trade/trade",
+                "iconPath": "images/account/index/trade.png",
+                "selectedIconPath": "images/account/index/trade-a.png",
+                "text": "交易记录"
+            }, {
+                "pagePath": "pages/point/point",
+                "iconPath": "images/account/index/point.png",
+                "selectedIconPath": "images/account/index/point-a.png",
+                "text": "爱心值"
+            }, {
+                "pagePath": "pages/system/system",
+                "iconPath": "images/account/index/system.png",
+                "selectedIconPath": "images/account/index/system-a.png",
+                "text": "系统管理"
+            }
 
+        ]
+
+    }
 }

@@ -1,34 +1,79 @@
 $themeColor:#f9bb18;
 page {
-    background: #ededed;
+    background: #f2f2f2;
+    padding: 20rpx;
+    width: auto;
 }
 
-.menu {
-    display: flex;
-    justify-content: space-around;
-    border-top: 4rpx solid #dddddd;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 20rpx 0;
-    .item {
-        width: 20%;
+.wrap {
+    border: 2rpx solid #ddd;
+    border-radius: 5px;
+    background: #ffffff;
+    .title {
+        color: #ffffff;
         text-align: center;
-        .icon {
-            width: 50rpx;
-            height: 50rpx;
-            margin: 0 auto;
-            background:red;
+        padding: 20rpx;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        font-size: 30rpx;
+    }
+    .row {
+        display: flex;
+        justify-content: space-around;
+        padding: 20rpx 0;
+        border-bottom: 2rpx solid #ddd;
+        &.row:last-child{
+            border-bottom: none;
         }
         .text {
+            width: 40%;
+            text-align: center;
             font-size: 30rpx;
         }
-    }
-    .wealth{
-        .icon{
-            background: url(../../images/account/index/wealth.png) no-repeat;
-            background: 100% 100%;
+        .number {
+            width: 60%;
+            font-size: 36rpx;
         }
+    }
+}
+
+.point {
+    margin-bottom: 20rpx;
+    .title {
+        background: #1b65ce;
+    }
+}
+.wealth {
+    border-color: #fb565c;
+    .title {
+        background: #fb565c;
+    }
+}
+.wealth-details{
+    background:#fff;
+    margin:20rpx 0;
+    navigator{
+        color: #1b65ce;
+        text-align: center;
+        padding: 20rpx 0;
+        border-radius: 3px;
+        font-size: 30rpx;
+    }
+}
+.explain{
+    font-size: 30rpx;
+    color: #666;
+    line-height: 40rpx;
+    text{
+        color: red;
+    }
+
+}
+.logo{
+    margin-top: 20rpx;
+    text-align: center;
+    image{
+        width: 300rpx;
+        height: 100rpx;
     }
 }

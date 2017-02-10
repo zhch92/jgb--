@@ -1,0 +1,35 @@
+$themeColor:#f9bb18;
+page {
+    background: #ededed;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    border-top: 4rpx solid #dddddd;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20rpx 0;
+    background:#fff;
+    .item {
+        width: 20%;
+        text-align: center;
+        .icon {
+            width: 50rpx;
+            height: 50rpx;
+            margin: 0 auto 10rpx;
+            background:red;
+        }
+        .text {
+            font-size: 30rpx;
+        }
+    }
+    .wealth{
+        .icon{
+            background: url(../../images/account/index/wealth.png) no-repeat;
+            background-size: 100% 100%;
+        }
+    }
+}

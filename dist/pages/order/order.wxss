@@ -1,0 +1,27 @@
+page {
+  background: #f2f2f2; }
+
+.row {
+  border-bottom: 2rpx solid #ddd;
+  padding: 20rpx 20rpx;
+  background: #fff;
+  font-size: 36rpx; }
+  .row .name {
+    color: #fb565c;
+    margin-left: 5px; }
+  .row picker, .row .wrap {
+    display: inline-block; }
+  .row input {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 10rpx; }
+
+.hint {
+  font-size: 30rpx;
+  color: #666;
+  line-height: 45rpx; }
+  .hint text {
+    color: #1b65ce; }
+
+button {
+  margin-top: 20px; }
