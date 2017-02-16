@@ -1,17 +1,31 @@
 {
     "pages": [
+        "pages/feedback/feedback",
+        
+        "pages/accountInfo/accountInfo",
 
-        "pages/order/order",
+        "pages/system/system",
+
+        "pages/point/point",
         "pages/product/product",
+        "pages/trade/trade",
         "pages/wealth/wealth",
 
-        "pages/trade/trade",
-        "pages/point/point",
-        "pages/system/system",
+        "pages/accountInfo/accountInfo",
+        "pages/companyInfo/companyInfo",
+        "pages/changePwd/changePwd",
+
+
+
+
+
+        "pages/details/details",
         "pages/index/index",
         "pages/register/register",
         "pages/agreement/agreement",
-        "pages/forgetpwd/forgetpwd"
+        "pages/forgetpwd/forgetpwd",
+        "pages/order/order"
+
 
     ],
     "window": {
@@ -31,7 +45,7 @@
                 "iconPath": "images/account/index/wealth.png",
                 "selectedIconPath": "images/account/index/wealth-a.png",
                 "text": "我的资产"
-            },{
+            }, {
                 "pagePath": "pages/product/product",
                 "iconPath": "images/account/index/product.png",
                 "selectedIconPath": "images/account/index/product-a.png",

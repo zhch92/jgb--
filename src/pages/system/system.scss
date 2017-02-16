@@ -1,35 +1,35 @@
 $themeColor:#f9bb18;
 page {
     background: #ededed;
+    font-size: 36rpx;
 }
 
-.menu {
-    display: flex;
-    justify-content: space-around;
-    border-top: 4rpx solid #dddddd;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 20rpx 0;
-    background:#fff;
-    .item {
-        width: 20%;
-        text-align: center;
-        .icon {
+.row {
+    background: #fff;
+    border-bottom: 2rpx solid #ddd;
+    padding: 20rpx;
+    color: #333;
+    navigator {
+        display: flex;
+        justify-content: space-between;
+    }
+    .text {
+       
+        image {
             width: 50rpx;
+            height: 40rpx;
+            vertical-align: middle;
+        }
+    }
+    .arrow {
+        image {
+            width: 27rpx;
             height: 50rpx;
-            margin: 0 auto 10rpx;
-            background:red;
-        }
-        .text {
-            font-size: 30rpx;
         }
     }
-    .wealth{
-        .icon{
-            background: url(../../images/account/index/wealth.png) no-repeat;
-            background-size: 100% 100%;
-        }
-    }
+}
+
+button {
+    font-size: 36rpx;
+    margin-top: 150rpx;
 }

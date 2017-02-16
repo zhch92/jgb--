@@ -40,32 +40,130 @@
 /******/ 	return __webpack_require__(0);
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */
+/******/ ({
+
+/***/ 0:
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(1);
+	module.exports = __webpack_require__(75);
 
 
 /***/ },
-/* 1 */
+
+/***/ 73:
 /***/ function(module, exports) {
 
-	"use strict";
+	'use strict';
 
+	function hint(msg) {
+	    var headline = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '提示';
+
+	    wx.showModal({
+	        title: headline,
+	        content: msg,
+	        success: function success(res) {
+	            if (res.confirm) {
+	                console.log('用户点击确定');
+	            }
+	        }
+	    });
+	}
+
+	function setTitle(text) {
+	    wx.setNavigationBarTitle({ title: text });
+	    console.log(text);
+	}
+
+	function dateFormat(date, fmt) {
+	    if (!isNaN(date) && date != null) {
+	        var str = new Date(date);
+	        var obj = {
+	            'M+': str.getMonth() + 1,
+	            'd+': str.getDate(),
+	            'h+': str.getHours(),
+	            'm+': str.getMinutes(),
+	            's+': str.getSeconds(),
+	            'q+': Math.floor((str.getMonth() + 3) / 3),
+	            'S': str.getMilliseconds()
+	        };
+	        if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (str.getFullYear() + '').substr(4 - RegExp.$1.length));
+	        for (var k in obj) {
+	            if (new RegExp('(' + k + ')').test(fmt)) fmt = fmt.replace(RegExp.$1, RegExp.$1.length == 1 ? obj[k] : ('00' + obj[k]).substr(('' + obj[k]).length));
+	        }return fmt;
+	    } else {
+	        return '';
+	    }
+	}
+
+	function thousands(value) {
+	    if (!isNaN(value) && value != null) {
+	        var s = parseFloat((value + '').replace(/[^\d.-]/g, '')) + '';
+	        var l = s.split('.')[0].split('').reverse();
+	        var t = '';
+	        for (var i = 0; i < l.length; i++) {
+	            t += l[i] + ((i + 1) % 3 == 0 && i + 1 != l.length ? ',' : '');
+	        }
+	        return t.split('').reverse().join('');
+	    } else {
+	        return '0';
+	    }
+	}
+	module.exports.hint = hint;
+	exports.setTitle = setTitle;
+	exports.dateFormat = dateFormat;
+	exports.thousands = thousands;
+
+/***/ },
+
+/***/ 75:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var util = __webpack_require__(73);
 	var app = getApp();
 
 	Page({
 	    data: {
-	        order: false
+	        order: 1,
+	        array: ['美国', '中国', '巴西', '日本']
 	    },
+	    onLoad: function onLoad(options) {
+	        var orderNum = Number(options.order);
+	        var title = void 0;
+	        this.setData({
+	            order: orderNum
+	        });
+	        switch (orderNum) {
+	            case 1:
+	                util.setTitle('场外确权');
+	                break;
+	            case 2:
+	                util.setTitle('场内确权');
+	                break;
+	            case 3:
+	                util.setTitle('申购');
+	                break;
+	            case 4:
+	                util.setTitle('赎回');
+	                break;
+	        }
+	    },
+
 	    bindDateChange: function bindDateChange(e) {
 	        this.setData({
 	            date: e.detail.value
+	        });
+	    },
+	    bindPickerChange: function bindPickerChange(e) {
+	        console.log('picker发送选择改变，携带值为', e.detail.value);
+	        this.setData({
+	            index: e.detail.value
 	        });
 	    }
 
 	});
 
 /***/ }
-/******/ ]);
+
+/******/ });

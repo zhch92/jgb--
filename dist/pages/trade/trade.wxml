@@ -1,1 +1,62 @@
-<view>交易记录</view>
+<view class="wrap">
+<block wx:if="{{trade}}">
+    <view class="top-nav">
+        <view class="active" bindtap="tradeSwitch">交易</view>
+        <view bindtap="earnings">收益</view>
+    </view>
+    </block>
+    <block wx:else>
+    <view class="top-nav">
+        <view bindtap="tradeSwitch">交易</view>
+        <view class="active"  bindtap="earnings">收益</view>
+    </view>
+	
+    </block>
+</view>
+<block wx:if='{{trade}}'>
+<view class="trade-wrap">
+    <view class="title">
+        <view class="text">交易记录</view>
+        <view class="choose-wrap">
+            <view wx:if="{{purchase}}">申购</view>
+            <view  class="active" wx:else>申购</view>
+            <view  wx:if="{{redemption}}">赎回</view>
+            <view  wx:else  class="active">赎回</view>
+        </view>
+    </view>
+    <view class="trade-record" wx:for="{{tradeList}}" wx:key="id">
+        <view class="top">
+            <view class="circle"></view>
+            <text>{{item.txnTime}}</text>
+            <text wx:if="{{item.txnType==0}}">申购</text>
+            <text wx:if="{{item.txnType==1}}">赎回</text>
+        </view>
+        <view class="bottom">
+            <image src="../../images/account/trade/product.png"></image>
+            <text>{{item.txnAmount}}元</text>
+        </view>
+    </view>
+
+</view>
+</block>
+<block wx:else>
+
+<view class="trade-wrap">
+    <view class="title">
+        <view class="text">收益</view>
+
+    </view>
+    <view class="trade-record" wx:for="{{earningsList}}" wx:key="id">
+        <view class="top">
+            <view class="circle"></view>
+            <text>{{item.time}} </text>
+        </view>
+        <view class="earnings">
+            每日基金收益：
+            <text>{{item.income}}元</text>
+        </view>
+    </view>
+</view>
+</block>
+
+<loading hidden="{{hiddenLoading}}">加载中</loading>

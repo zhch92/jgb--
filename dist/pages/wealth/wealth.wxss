@@ -22,12 +22,24 @@ page {
     .wrap .row.row:last-child {
       border-bottom: none; }
     .wrap .row .text {
-      width: 40%;
-      text-align: center;
+      width: 35%;
+      padding-left: 5%;
+      text-align: left;
       font-size: 30rpx; }
+      .wrap .row .text view {
+        font-size: 20rpx;
+        color: #1b65ce; }
     .wrap .row .number {
       width: 60%;
       font-size: 36rpx; }
+      .wrap .row .number.color-bule {
+        color: #1b65ce;
+        font-size: 40rpx;
+        font-weight: bold; }
+      .wrap .row .number.color-orange {
+        color: #fb565c;
+        font-size: 40rpx;
+        font-weight: bold; }
 
 .point {
   margin-bottom: 20rpx; }

@@ -1,0 +1,22 @@
+page {
+  background: #ededed;
+  font-size: 36rpx; }
+
+.row {
+  background: #fff;
+  border-bottom: 2rpx solid #ddd;
+  padding: 20rpx;
+  color: #333;
+  display: flex;
+  justify-content: space-between; }
+  .row .text image {
+    width: 50rpx;
+    height: 40rpx;
+    vertical-align: middle; }
+  .row .arrow image {
+    width: 27rpx;
+    height: 50rpx; }
+
+button {
+  font-size: 36rpx;
+  margin-top: 150rpx; }

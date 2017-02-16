@@ -4,33 +4,64 @@ page {
     // padding-left: 20rpx;
     // width: auto;
 }
-.row{
+
+.row {
     border-bottom: 2rpx solid #ddd;
     padding: 20rpx 20rpx;
-    background:#fff;
+    background: #fff;
     font-size: 36rpx;
-    .name{
-        color:#fb565c;
+    .name {
+        color: #fb565c;
         margin-left: 5px;
     }
-    picker,.wrap{
+    picker,
+    .wrap {
         display: inline-block;
     }
-    input{
+    .wrap {
+        font-size: 30rpx;
+        // letter-spacing: 4px;
+    }
+    .date {
+        width: 400rpx;
+        min-height: 36rpx;
+    }
+    &.relative {
+        input {
+            position: relative;
+            top: -5px;
+        }
+    }
+    input {
         display: inline-block;
         // background:red;
         vertical-align: middle;
         padding: 0 10rpx;
     }
 }
-.hint{
+
+.bank-info {
+    background: #ffffff;
+    border:1px solid #ddd;
+    margin: 0 10rpx;
+    font-size: 30rpx;
+    padding: 10rpx;
+    view{
+        line-height: 40rpx;
+    }
+}
+
+.hint {
     font-size: 30rpx;
     color: #666;
     line-height: 45rpx;
-    text{
+    margin: 10px 0;
+    padding: 0 10rpx;
+    text {
         color: #1b65ce;
     }
 }
-button{
+
+button {
     margin-top: 20px;
 }

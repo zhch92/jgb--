@@ -1,1 +1,46 @@
-<view>爱心值</view>
+<view class="wrap point">
+    <view class="title">爱心值</view>
+    <view class="row">
+        <view class="text">我的爱心值</view>
+        <view class="number color-bule">{{point.totalPoint}}</view>
+    </view>
+    <view class="row">
+        <view class="text">可用爱心值</view>
+        <view class="number">{{point.availPoint}}</view>
+    </view>
+    <view class="row">
+        <view class="text">在途爱心值
+            <view>(<text>{{point.availDate}}</text>可用)</view>
+        </view>
+        <view class="number">{{point.frozePoint}}</view>
+    </view>
+</view>
+<view class="point-wrap">
+    <view class="title">
+        <view class="text">爱心记录</view>
+    </view>
+    <view class="point-record" wx:for="{{pointList}}" wx:key="1" >
+        <view class="top">
+            <view class="circle"></view>
+            <text>{{item.time}}</text>
+            <text>{{ item.actionDesc }}</text>
+        </view>
+        <view class="middle">{{ item.investorName }}</view>
+        <view class="bottom">
+            <view class="point-val">
+                <view>{{ item.point }}</view>
+                <view>爱心值</view>
+            </view>
+            <view class="text">
+                <view>
+                    产品:
+                    <text>{{ item.productName }}</text>
+                </view>
+                <view>
+                    金额:
+                    <text>{{item.memo}}元</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

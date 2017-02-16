@@ -1,0 +1,44 @@
+page {
+  background: #ededed;
+  padding: 20rpx;
+  width: auto; }
+
+.item {
+  margin-top: 10rpx;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background: #fff;
+  padding: 20rpx;
+  position: relative; }
+  .item .name {
+    line-height: 45rpx;
+    font-size: 36rpx;
+    color: #1b65ce; }
+  .item .account {
+    margin-top: 20rpx;
+    font-size: 32rpx;
+    color: #666; }
+    .item .account text {
+      color: #333; }
+  .item .operation {
+    padding-left: 50rpx;
+    margin-top: 20rpx;
+    color: #1b65ce;
+    font-size: 32rpx;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAiCAMAAAANmfvwAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABsFBMVEUAAAAzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMAAABtAD5JAAAAjnRSTlMADW2i0uv7+vHXq3seM7bq4r2FVz8+UXq52PDFSxH5RTWj89ErzC4WqHFkfA4EUJRhWAq/Ki2VRlQP2id2CXfKPS++25kkIlO6iOADOQvuYsiHwHlC6E4m8jwa3hjfScYbak8sFzfsqY3HzXLTDKECuO8dSNSeX0TjZv075NCbiYZjrEBcXWvdQyF/w8lWYSkOjgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAGKSURBVDjLfZJXV8JQEIRXBSkWUFFRsYINxQJYiAXFXkAs2FBRwYaCLdh7xba/2YgEEjF3HvbOzPnOzSYnAHElJaeIxKkSqUyelg7/KSNToczKzlHl5uWrCwqLNAlAcVaJujQey8ortDo+ocHKKn5TXYO13KzHOtbWG1jXgI1xogmbWWs0mWN1C7aytg3bY7WF4jywAzt/TRd2c17cyt2yB3sjp60PhBDoF//MARwURgCHmDFsAwIyMgowJh0nIXZHC0xQQELA2QjlmWRk0gRT02RkxgXULBmZmwfXAhlZdINinIwsUbC8wq88q/w86ADnGq8xa9e9OkZmX7TY2IStLR6yjQU7Vkb+pmix64HpPR4SCHrtSYws+9HiIAi+wyMgafQYgA6RiBMXM07RQEDOIh9/WS5MnF9EDh1eChFG9r/PR6GNJTWsCwowV9dxf4OqRMA37+HGW7z7S9xLHvjFo1vZbefkp8qr54R7X+hXdWd4zhJ469HLRfT7v9uF+z9omf9TRntCX5z6Gx8tS2LGKgP4AAAAAElFTkSuQmCC) no-repeat;
+    background-size: 32rpx 32rpx; }
+    .item .operation text {
+      color: #333;
+      margin-left: 10rpx; }
+  .item .type {
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+    width: 40px;
+    height: 20px;
+    color: #1b65ce;
+    font-size: 30rpx;
+    text-align: center;
+    line-height: 20px;
+    background: url(../../images/account/system/bg_blue.png) no-repeat;
+    background-size: 40px 20px; }

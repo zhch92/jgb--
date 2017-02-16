@@ -1,0 +1,29 @@
+<view class="row">
+    <view class="text">
+        <image src='../../images/account/system/acconut.png'></image> 账户信息</view>
+    <view class="arrow">
+        <image src="../../images/account/system/arrow.png"></image>
+    </view>
+</view>
+<view class="row">
+    <view class="text">
+        <image src='../../images/account/system/company.png'></image> 企业信息</view>
+    <view class="arrow">
+        <image src="../../images/account/system/arrow.png"></image>
+    </view>
+</view>
+<view class="row">
+    <view class="text">
+        <image src='../../images/account/system/modify.png'></image> 修改密码</view>
+    <view class="arrow">
+        <image src="../../images/account/system/arrow.png"></image>
+    </view>
+</view>
+<view class="row">
+    <view class="text">
+        <image src='../../images/account/system/feedback.png'></image> 意见反馈</view>
+    <view class="arrow">
+        <image src="../../images/account/system/arrow.png"></image>
+    </view>
+</view>
+<button type="warn" bindtap="loginOut">退出登录</button>

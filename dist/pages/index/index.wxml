@@ -9,6 +9,7 @@
         <text>为机构理财助力</text>
     </view>
 </view>
+<loading hidden="{{hiddenLoading}}">登录中</loading>
 <view class="user"><input placeholder="请输入您的账号" id='user' bindinput="bindUser" /></view>
 <block wx:if="{{eye}}">
 	<view class='pwd'><input  value="{{pwd}}" placeholder="请输入您的密码" bindinput="bindPwd" id='pwd' />
@@ -35,5 +36,4 @@
 <view class="register">
 	<text>没有账号? </text><navigator url="../register/register" hover-class="none">立即注册</navigator>
 </view>
-
 <view class="bg"><image src='../../images/index/bg.jpg'></image></view>

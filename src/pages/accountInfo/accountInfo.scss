@@ -1,0 +1,52 @@
+$themeColor:#1b65ce;
+page {
+    background: #ededed;
+    padding: 20rpx;
+    width: auto;}
+.item{
+    margin-top: 10rpx;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background:#fff;
+    padding: 20rpx;
+    position: relative;
+    .name{
+        line-height: 45rpx;
+        font-size: 36rpx;
+        color: $themeColor;
+    }
+    .account{
+        margin-top: 20rpx;
+        font-size: 32rpx;
+        color: #666;
+        text{
+            color:#333;
+        }
+    }
+    .operation{
+        padding-left: 50rpx;
+        margin-top: 20rpx;
+        color: $themeColor;
+
+        font-size: 32rpx;
+        background:url(../../images/account/system/pending.png) no-repeat;
+        background-size: 32rpx 32rpx;
+        text{
+            color: #333;
+            margin-left: 10rpx;
+        }
+    }
+    .type{
+        position: absolute;
+        right: 20px;
+        bottom: 10px;
+        width: 40px;
+        height: 20px;
+        color: $themeColor;
+        font-size: 30rpx;
+        text-align: center;
+        line-height: 20px;
+        background: url(../../images/account/system/bg_blue.png) no-repeat;
+        background-size: 40px 20px;
+    }
+}

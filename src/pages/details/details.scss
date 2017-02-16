@@ -1,0 +1,105 @@
+$themeColor:#1b65ce;
+page {
+    background: #f2f2f2;
+    padding: 20rpx;
+    width: auto;
+}
+
+.item {
+    background: #fff;
+    margin-bottom: 20rpx;
+    border-radius: 3px;
+    .name {
+        padding: 20rpx 0;
+        border-bottom: 2rpx solid $themeColor;
+        font-size: 42rpx;
+        color: $themeColor;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text {
+            padding: 10rpx 6rpx;
+            border-left: 2rpx solid $themeColor;
+        }
+    }
+    .product {
+        background: #fff;
+        position: relative;
+        .btn-wrap {
+            position: absolute;
+            right: 0px;
+            width: 150rpx;
+            padding: 10rpx 40rpx;
+            top: 50%;
+            margin-top: -30rpx;
+            background:#fff;
+            .btn {
+                border: 2rpx solid $themeColor;
+                border-radius: 3px;
+                color: $themeColor;
+                text-align: center;
+                line-height: 50rpx;
+
+                &.solid {
+                    background: $themeColor;
+                    color: #fff;
+                    margin-top: 20rpx;
+                }
+            }
+        }
+        .row {
+            padding: 30rpx 0;
+            padding-left: 10rpx;
+            border-bottom: 1px solid #ddd;
+            font-size: 32rpx;
+            color: #000;
+            line-height: 1rem;
+            .block {
+                display: inline-block;
+                margin-right: 20px;
+                color: #333;
+                text {
+                    margin-left: 10px;
+                }
+            }
+            text {
+                color: #000;
+                margin-left: 10rpx;
+            }
+            &:first-child {
+                color: #333;
+                border-bottom: none;
+                .prodName {
+                    display: inline-block;
+                    max-width: 84%;
+                }
+                .post {
+                    position: relative;
+                    top: -27rpx;
+                }
+                text {
+                    display: inline-block;
+                    border: 1px solid #1b65ce;
+                    border-radius: 3px;
+                    color: #1b65ce;
+                    font-size: 24rpx;
+                    padding: 4rpx 10rpx;
+                    vertical-align: middle;
+                }
+                .current {
+                    color: #fb565c;
+                    border-color: #fb565c;
+                }
+            }
+            // &:last-child {
+            //     border-bottom: none;
+            // }
+            &:nth-child(2) {
+                text {
+                    color: $themeColor;
+                    font-size: 40rpx;
+                }
+            }
+        }
+    }
+}

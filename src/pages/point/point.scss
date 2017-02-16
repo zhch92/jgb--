@@ -1,35 +1,160 @@
-$themeColor:#f9bb18;
+$themeColor:#1b65ce;
 page {
     background: #ededed;
 }
 
-.menu {
-    display: flex;
-    justify-content: space-around;
-    border-top: 4rpx solid #dddddd;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 20rpx 0;
-    background:#fff;
-    .item {
-        width: 20%;
+.wrap {
+    border: 2rpx solid #ddd;
+    border-radius: 5px;
+    background: #ffffff;
+     margin: 20rpx;
+
+    .title {
+        color: #ffffff;
         text-align: center;
-        .icon {
-            width: 50rpx;
-            height: 50rpx;
-            margin: 0 auto 10rpx;
-            background:red;
+        padding: 20rpx;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        font-size: 30rpx;
+    }
+    .row {
+        display: flex;
+        justify-content: space-around;
+        padding: 20rpx 0;
+        border-bottom: 2rpx solid #ddd;
+        &.row:last-child {
+            border-bottom: none;
         }
         .text {
+            width: 35%;
+            padding-left: 5%;
+            text-align: left;
             font-size: 30rpx;
+            view {
+                font-size: 20rpx;
+                color: #1b65ce;
+            }
+        }
+        .number {
+            width: 60%;
+            font-size: 36rpx;
+            &.color-bule {
+                color: #1b65ce;
+                font-size: 40rpx;
+                font-weight: bold;
+            }
+            &.color-orange {
+                color: #fb565c;
+                font-size: 40rpx;
+                font-weight: bold;
+            }
         }
     }
-    .wealth{
-        .icon{
-            background: url(../../images/account/index/wealth.png) no-repeat;
-            background-size: 100% 100%;
+}
+
+.point {
+    margin-bottom: 20rpx;
+    .title {
+        background: #1b65ce;
+    }
+}
+
+.point-wrap {
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    margin: 20rpx;
+    background: #fff;
+    .title {
+        display: flex;
+        padding: 20rpx 20rpx;
+        border-bottom: 2px solid $themeColor;
+        color: $themeColor;
+        .text {
+            width: 60%;
+            font-size: 40rpx;
+            padding-left: 8rpx;
+            border-left: 2rpx solid $themeColor;
+        }
+    }
+    .point-record {
+        margin: 0 20rpx;
+        border-left: 2rpx solid #ddd;
+        padding: 10rpx 0;
+        &:last-child {
+            .bottom,
+            .earnings {
+                border-bottom: none;
+            }
+        }
+        .top {
+            display: flex;
+            justify-content: space-between;
+            margin-left: 28rpx;
+            margin-bottom: 20rpx;
+            font-size: 36rpx;
+            padding-top: 10rpx;
+            position: relative;
+            .circle {
+                position: absolute;
+                width: 20rpx;
+                height: 20rpx;
+                border: 2rpx solid $themeColor;
+                border-radius: 100%;
+                top: 50%;
+                margin-top: -10rpx;
+                left: -37rpx;
+                background:#fff;
+            }
+        }
+        .middle {
+            margin-left: 20rpx;
+            font-size: 36rpx;
+            margin-bottom: 20rpx;
+            padding: 5rpx 0rpx 5rpx 55rpx;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            background: url(../../images/account/point/account.png) no-repeat;
+            background-size: 45rpx 45rpx;
+        }
+        .bottom {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 2rpx solid #ddd;
+            margin-left: 20rpx;
+            padding-bottom: 20rpx;
+            .point-val {
+                border: 2rpx solid $themeColor;
+                border-radius: 3px;
+                width: 18%;
+                text-align: center;
+                view {
+                    font-size: 36rpx;
+                    padding: 10rpx 0;
+                    color: #fb565c;
+                    &:last-child {
+                        background: $themeColor;
+                        color: #fff;
+                        font-size: 32rpx;
+                    }
+                }
+            }
+            .text {
+                width: 79%;
+                font-size: 34rpx;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                // view {
+                //     margin-bottom: 10rpx;
+                // }
+                text {
+                    color: $themeColor;
+                }
+            }
         }
     }
 }

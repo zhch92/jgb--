@@ -13,218 +13,149 @@
     </block>
 </view>
 <block wx:if="{{current}}">
-    <view class="title">
-        <text>场内基金</text>
+    <view class="content">
+        <view class="title">
+            <text>场内基金</text>
+        </view>
+        <view wx:for="{{product}}" class="item" wx:key="id">
+            <block wx:if='{{item.securityMarketType==1}}'>
+                <view class="top">
+                    <text>{{item.name}}</text>
+                </view>
+                <view class="bottom">
+                    <view class="block">
+                        <view class="intro">七日年化收益率</view>
+                        <view class="number">{{item.seventhYearYield}}
+                            <text>%</text>
+                        </view>
+                    </view>
+                    <view class="block">
+                        <view class="intro">
+                            万份收益:
+                            <text>{{item.yieldPerMillion}}</text>元
+                        </view>
+                        <view class="intro">
+                            爱 心 值:
+                            <text>{{item.pointRate}}/</text>亿
+                        </view>
+                        <view class="intro">
+                            更新日期:
+                            <text>{{item.uptTime}}</text>
+                        </view>
+                    </view>
+                    <view class="block">
+                        <view class="btn">
+                            <navigator url="../order/order?order=1" hover-class="none">场内确权</navigator>
+                        </view>
+                    </view>
+                </view>
+            </block>
+        </view>
     </view>
     <view class="content">
-        <view class="item">
-            <view class="top">
-                <text>长信利息收益B（519598）</text>
-            </view>
-            <view class="bottom">
-                <view class="block">
-                    <view class="intro">七日年化收益率</view>
-                    <view class="number">4.1530
-                        <text>%</text>
-                    </view>
-                </view>
-                <view class="block">
-                    <view class="intro">
-                        万份收益:
-                        <text>0.9857</text>元
-                    </view>
-                    <view class="intro">
-                        爱 心 值:
-                        <text>247/亿</text>
-                    </view>
-                    <view class="intro">
-                        更新日期:
-                        <text>2017.01.01</text>
-                    </view>
-                </view>
-                <view class="block">
-                    <view class="btn">场外确权</view>
-                </view>
-            </view>
+        <view class="title margin">
+            <text>场外基金</text>
         </view>
-        <view class="item">
-            <view class="top">
-                <text>长信利息收益B（519598）</text>
-            </view>
-            <view class="bottom">
-                <view class="block">
-                    <view class="intro">七日年化收益率</view>
-                    <view class="number">4.1530
-                        <text>%</text>
+        <view wx:for="{{product}}" class="item"  wx:key="id">
+            <block wx:if='{{item.securityMarketType==2}}'>
+                <view class="top">
+                    <text>{{item.name}}</text>
+                </view>
+                <view class="bottom">
+                    <view class="block">
+                        <view class="intro">七日年化收益率</view>
+                        <view class="number">{{item.seventhYearYield}}
+                            <text>%</text>
+                        </view>
+                    </view>
+                    <view class="block">
+                        <view class="intro">
+                            万份收益:
+                            <text>{{item.yieldPerMillion}}</text>元
+                        </view>
+                        <view class="intro">
+                            爱 心 值:
+                            <text>{{item.pointRate}}/</text>亿
+                        </view>
+                        <view class="intro">
+                            更新日期:
+                            <text>{{item.uptTime}}</text>
+                        </view>
+                    </view>
+                    <view class="block">
+                        <block wx:if="{{item.issueId == 1}}">
+                            <view class="btn">
+                                <navigator url="../order/order?order=1" hover-class="none">场外确权</navigator>
+                            </view>
+                        </block>
+                        <block wx:else>
+                            <view class="btn">
+                                <navigator url="../order/order?order=3" hover-class="none">申购</navigator>
+                            </view>
+                            <view class="btn solid">
+                                <navigator url="../order/order?order=4" hover-class="none">赎回</navigator>
+                            </view>
+                        </block>
                     </view>
                 </view>
-                <view class="block">
-                    <view class="intro">
-                        万份收益:
-                        <text>0.9857</text>元
-                    </view>
-                    <view class="intro">
-                        爱 心 值:
-                        <text>247/亿</text>
-                    </view>
-                    <view class="intro">
-                        更新日期:
-                        <text>2017.01.01</text>
-                    </view>
-                </view>
-                <view class="block">
-                    <view class="btn">场外确权</view>
-                </view>
-            </view>
-        </view>
-    </view>
-    <view class="title margin">
-        <text>场外基金</text>
-    </view>
-    <view class="content">
-        <view class="item">
-            <view class="top">
-                <text>长信利息收益B（519598）</text>
-            </view>
-            <view class="bottom">
-                <view class="block">
-                    <view class="intro">七日年化收益率</view>
-                    <view class="number">4.1530
-                        <text>%</text>
-                    </view>
-                </view>
-                <view class="block">
-                    <view class="intro">
-                        万份收益:
-                        <text>0.9857</text>元
-                    </view>
-                    <view class="intro">
-                        爱 心 值:
-                        <text>247/亿</text>
-                    </view>
-                    <view class="intro">
-                        更新日期:
-                        <text>2017.01.01</text>
-                    </view>
-                </view>
-                <view class="block">
-                    <view class="btn">场外确权</view>
-                </view>
-            </view>
-        </view>
-        <view class="item">
-            <view class="top">
-                <text>长信利息收益B（519598）</text>
-            </view>
-            <view class="bottom">
-                <view class="block">
-                    <view class="intro">七日年化收益率</view>
-                    <view class="number">4.1530
-                        <text>%</text>
-                    </view>
-                </view>
-                <view class="block">
-                    <view class="intro">
-                        万份收益:
-                        <text>0.9857</text>元
-                    </view>
-                    <view class="intro">
-                        爱 心 值:
-                        <text>247/亿</text>
-                    </view>
-                    <view class="intro">
-                        更新日期:
-                        <text>2017.01.01</text>
-                    </view>
-                </view>
-                <view class="block">
-                    <view class="btn">申购</view>
-                    <view class="btn solid">赎回</view>
-                </view>
-            </view>
+            </block>
         </view>
     </view>
 </block>
 <block wx:else>
-    <view class="list">
-        <view class="top">国泰君安君享盈活2号集合资产管理计划——(000999)</view>
-        <view class="middle">
-            <view class="block">
-                <view class="intro">预期报价收益率</view>
-                <view class="number">4.70
-                    <text>%</text>
+    <view class="list" wx:for="{{product}}"  wx:key="id">
+        <block wx:if='{{item.securityMarketType==null}}'>
+            <view class="top">{{item.name}}</view>
+            <view class="middle">
+                <view class="block">
+                    <view class="intro">预期报价收益率</view>
+                    <view class="number"> {{item.yieldPerMillion}}
+                        <text>%</text>
+                    </view>
+                </view>
+                <view class="block">
+                    <view class="intro">期限(天)</view>
+                    <view class="number">{{item.valueDuration}}</view>
+                </view>
+                <block wx:if="{{item.endFlag}}">
+                    <view class="block">
+                        <view class="over">已结束</view>
+                    </view>
+                </block>
+                <block wx:else>
+                    <view class="block">
+                        <view class="btn">
+                            <navigator url="../order/order?order=1" hover-class="none">查看详情</navigator>
+                        </view>
+                        <view class="btn solid">
+                            <navigator url="../order/order?order=1" hover-class="none">预约</navigator>
+                        </view>
+                    </view>
+                </block>
+            </view>
+            <view class="bottom">
+                <view class="block">
+                    <view class="intro">爱心值(日终存量)</view>
+                    <view class="intro">{{item.pointRate}}/亿</view>
+                </view>
+                <view class="block">
+                    <view class="intro">资金追加日：
+                        <text>{{item.fundAccessDate}}</text>
+                    </view>
+                    <view class="intro">产品计息日：
+                        <text>{{item.yieldStartDate}}</text>
+                    </view>
+                </view>
+                <view class="block">
+                    <view class="intro">产品到期日：
+                        <text>{{item.yieldEndDate}}</text>
+                    </view>
+                    <view class="intro">资金到账日：
+                        <text>{{item.fundExitDate}}</text>
+                    </view>
                 </view>
             </view>
-            <view class="block">
-                <view class="intro">期限(天)</view>
-                <view class="number">33</view>
-            </view>
-            <view class="block">
-                <view class="btn">查看详情</view>
-                <view class="btn solid">预约</view>
-            </view>
-        </view>
-        <view class="bottom">
-            <view class="block">
-                <view class="intro">爱心值(日终存量)</view>
-                <view class="intro">245/亿</view>
-            </view>
-            <view class="block">
-                <view class="intro">资金追加日：
-                    <text>2017.01.01</text>
-                </view>
-                <view class="intro">产品计息日：
-                    <text>2017.01.01</text>
-                </view>
-            </view>
-            <view class="block">
-                <view class="intro">产品到期日：
-                    <text>2017.01.01</text>
-                </view>
-                <view class="intro">资金到账日：
-                    <text>2017.01.01</text>
-                </view>
-            </view>
-        </view>
-    </view>
-    <view class="list end">
-        <view class="top">国泰君安君享盈活2号集合资产管理计划——(000999)</view>
-        <view class="middle">
-            <view class="block">
-                <view class="intro">预期报价收益率</view>
-                <view class="number">4.70
-                    <text>%</text>
-                </view>
-            </view>
-            <view class="block">
-                <view class="intro">期限(天)</view>
-                <view class="number">33</view>
-            </view>
-            <view class="block">
-                <view class="over">已结束</view>
-            </view>
-        </view>
-        <view class="bottom">
-            <view class="block">
-                <view class="intro">爱心值(日终存量)</view>
-                <view class="intro">245/亿</view>
-            </view>
-            <view class="block">
-                <view class="intro">资金追加日：
-                    <text>2017.01.01</text>
-                </view>
-                <view class="intro">产品计息日：
-                    <text>2017.01.01</text>
-                </view>
-            </view>
-            <view class="block">
-                <view class="intro">产品到期日：
-                    <text>2017.01.01</text>
-                </view>
-                <view class="intro">资金到账日：
-                    <text>2017.01.01</text>
-                </view>
-            </view>
-        </view>
+        </block>
     </view>
 </block>
+<loading hidden="{{hiddenLoading}}">加载中</loading>

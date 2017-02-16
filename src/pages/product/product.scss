@@ -16,6 +16,7 @@ page {
             width: 50%;
             padding: 20rpx 0;
             text-align: center;
+            color: $themeColor;
             &.active {
                 background: $themeColor;
                 color: #fff;
@@ -24,10 +25,15 @@ page {
     }
 }
 
-.title {
+
+
+.content {
+    padding: 10rpx 20rpx;
+    .title {
     padding: 20rpx 10rpx;
     border-bottom: 2rpx solid $themeColor;
     margin-top: 20rpx;
+    background:#fff;
     &.margin {
         border-color: #fb565c;
         text {
@@ -41,9 +47,6 @@ page {
         color: $themeColor;
     }
 }
-
-.content {
-    padding: 10rpx 20rpx;
     .item {
         background: #fff;
         border-bottom: 2rpx solid #ddd;
@@ -66,18 +69,18 @@ page {
             padding: 20rpx 0;
             .block {
                 color: #666;
-                font-size: 32rpx;
+                font-size: 28rpx;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-around;
                 &:nth-child(1) {
-                    width: 30%;
+                    width: 33%;
                     text-align: center;
                     .intro {
-                        font-size: 30rpx;
+                        font-size: 28rpx;
                     }
                     .number {
-                        font-size: 44rpx;
+                        font-size: 34rpx;
                         color: $themeColor;
                         text {
                             font-size: 30rpx;
@@ -85,8 +88,8 @@ page {
                     }
                 }
                 &:nth-child(2) {
-                    width: 45%;
-                    border-right: 2rpx dotted #ddd;
+                    width: 42%;
+                    border-right: 4rpx dotted #ddd;
                     .intro {
                         line-height: 45rpx;
                         text {
@@ -95,12 +98,12 @@ page {
                         }
                         &:nth-child(1) {
                             text {
-                                font-size: 40rpx;
+                                font-size: 30rpx;
                             }
                         }
                         &:nth-child(2) {
                             text {
-                                font-size: 36rpx;
+                                font-size: 30rpx;
                             }
                         }
                         &:nth-child(3) {
@@ -218,13 +221,13 @@ page {
                 }
             }
             &:nth-child(1) {
-                width: 30%;
+                width: 26%;
             }
             &:nth-child(2) {
-                width: 35%;
+                width: 37%;
             }
             &:nth-child(3) {
-                width: 35%;
+                width: 37%;
                             }
         }
     }

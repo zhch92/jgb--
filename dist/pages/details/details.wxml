@@ -1,0 +1,50 @@
+<view class="item" wx:for="{{details}}">
+    <view class="name">
+        <text>{{item.investorName}}</text>
+    </view>
+    <view class="product" wx:for="{{item.taWealthAcctlist}}" wx:key="idx">
+        <view class="row">
+            <view class="prodName">{{item.prodName}}</view>
+            <block wx:if="{{item.prodName.length>18}}">
+                <text class="post current" wx:if="{{item.productType==0}}">活期</text>
+                <text class="post" wx:else>定期</text>
+            </block>
+            <block wx:else>
+                <text class="current" wx:if="{{item.productType==0}}">活期</text>
+                <text wx:else>定期</text>
+            </block>
+        </view>
+        <view class="row">{{item.issueId == 3 ? '金额(元)' :'持有资产（元）'}}
+            <text>{{item.totalAsset}}</text>
+        </view>
+        <block wx:if="{{item.issueId == 3 }}">
+            <view class="row">
+                <view class="block">预期（天）
+                    <text>{{item.valueDuration}}</text>
+                </view>
+                <view class="block">预期报价收益率
+                    <text>{{item.seventhYearYield}}</text>
+                </view>
+            </view>
+        </block>
+        <block wx:else>
+            <view class="row">昨日收益（元）
+                <text>{{item.nowdayIncome}}</text>
+            </view>
+            <view class="row">累计收益（元）
+                <text>{{item.totalIncome}}</text>
+            </view>
+        </block>
+        <block wx:if="{{item.issueId == 2 }}">
+            <view class="btn-wrap">
+                <view class="btn">
+                    <navigator url="../order/order?order=3" hover-class="none">申购</navigator>
+                </view>
+                <view class="btn solid">
+                    <navigator url="../order/order?order=4" hover-class="none">赎回</navigator>
+                </view>
+            </view>
+        </block>
+    </view>
+</view>
+<loading hidden="{{hiddenLoading}}">登录中</loading>

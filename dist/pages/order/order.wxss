@@ -9,17 +9,37 @@ page {
   .row .name {
     color: #fb565c;
     margin-left: 5px; }
-  .row picker, .row .wrap {
+  .row picker,
+  .row .wrap {
     display: inline-block; }
+  .row .wrap {
+    font-size: 30rpx; }
+  .row .date {
+    width: 400rpx;
+    min-height: 36rpx; }
+  .row.relative input {
+    position: relative;
+    top: -5px; }
   .row input {
     display: inline-block;
     vertical-align: middle;
     padding: 0 10rpx; }
 
+.bank-info {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  margin: 0 10rpx;
+  font-size: 30rpx;
+  padding: 10rpx; }
+  .bank-info view {
+    line-height: 40rpx; }
+
 .hint {
   font-size: 30rpx;
   color: #666;
-  line-height: 45rpx; }
+  line-height: 45rpx;
+  margin: 10px 0;
+  padding: 0 10rpx; }
   .hint text {
     color: #1b65ce; }
 

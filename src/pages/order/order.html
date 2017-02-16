@@ -1,38 +1,102 @@
-<block wx:if="{{order}}">
-    
-<view class="row">确权产品
-    <text class="name">长信利息收益B（519598)</text>
-</view>
-<view class="row">开户日期
-    <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
-        <input type="text" value="{{date}}" />
-    </picker>
-</view>
-<view class="row">申购金额
-    <input type="text" />(元)</view>
-<view class="row">股东账号
-    <input type="text" />
-</view>
-<view class="hint">注：请贵公司于当日15:00前在<text>场内交易系统</text>完成<text>长信利息收益B(519598)</text>交易</view>
-<button type="primary">确权</button>
+<!-- 场内确权 -->
+<block wx:if="{{order==1}}">
+    <view class="row">确权产品
+        <text class="name">长信利息收益B（519598)</text>
+    </view>
+    <view class="row">开户日期
+        <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+            <!-- <input type="text" value="{{date}}" /> -->
+            <view class="date">{{date}}</view>
+        </picker>
+    </view>
+    <view class="row">申购金额
+        <input type="text" />(元)</view>
+    <view class="row">股东账号
+        <input type="text" />
+    </view>
+    <view class="hint">注：请贵公司于当日15:00前在
+        <text>场内交易系统</text>完成
+        <text>长信利息收益B(519598)</text>交易</view>
+    <button type="primary">确权</button>
 </block>
+<!-- 场外确权 -->
+<block wx:if="{{order==2}}">
+    <view class="row">确权产品
+        <text class="name">长信利息收益B（519598)</text>
+    </view>
+    <view class="row">开户日期
+        <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+            <!-- <input type="text" value="{{date}}" /> -->
+            <view class="date">{{date}}</view>
+        </picker>
+    </view>
+    <view class="row relative">
+        <view class="wrap">
+            <view>统 一 社 会 </view>
+            <view>信 用 代 码 </view>
+        </view>
+        <input type="text" />
+    </view>
+    <view class="row  relative">
+        <view class="wrap">
+            <view>企 业 / 基金</view>
+            <view>产 品 名 称</view>
+        </view>
+        <input type="text" />
+    </view>
+    <view class="hint">注：请贵公司于当日15:00前在
+        <text>场内交易系统</text>完成
+        <text>长信利息收益B(519598)</text>交易</view>
+    <button type="primary">确权</button>
+</block>
+<!-- 申购 -->
+<block wx:if="{{order==3}}">
+    <view class="row">确权产品
+        <text class="name">长信利息收益B（519598)</text>
+    </view>
+    <view class="row">开户日期
+        <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+            <!-- <input type="text" value="{{date}}" /> -->
+            <view class="date">{{date}}</view>
+        </picker>
+    </view>
+    <view class="row">选择账户
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+            <!-- <input type="text" value="{{date}}" /> -->
+            <view class="date">{{array[index]}}</view>
+        </picker>
+    </view>
+    <view class="row">申购金额
+        <input type="text" />(元)</view>
+    <view class="hint">请以贵公司开户银行(尾号0000),将预约资金汇入以下银行账户</view>
+    <view class="bank-info">
+        <view>银行户名：广发基金管理有限公司直销账户</view>
+        <view>银行账号：3602 0001 2983 8383 823</view>
+        <view>开户行：中国工商银行广州第一支行</view>
+    </view>
+    <view class="hint">注：请贵公司于当日15:00前在
+        <text>场内交易系统</text>完成
+        <text>长信利息收益B(519598)</text>交易</view>
+    <button type="primary">申购</button>
+</block>
+<block wx:if="{{order==4}}">
 
-
-
-
-
-<view class="row">确权产品
-    <text class="name">长信利息收益B（519598)</text>
-</view>
-<view class="row">开户日期
-    <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
-        <input type="text" value="{{date}}" />
-    </picker>
-</view>
-<view class="row">申购金额
-    <input type="text" />(元)</view>
-<view class="row">股东账号
-    <input type="text" />
-</view>
-
-<button type="primary">确权</button>
+    <view class="row">权产品
+        <text class="name">长信利息收益B（519598)</text>
+    </view>
+    <view class="row">开户日期
+        <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+            <!-- <input type="text" value="{{date}}" /> -->
+            <view class="date">{{date}}</view>
+        </picker>
+    </view>
+    <view class="row">选择账户
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+            <!-- <input type="text" value="{{date}}" /> -->
+            <view class="date">{{array[index]}}</view>
+        </picker>
+    </view>
+    <view class="row">赎回金额
+        <input type="text" />(元)</view>
+    <button type="primary">赎回</button>
+    </block>

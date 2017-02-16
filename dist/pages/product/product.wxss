@@ -13,27 +13,28 @@ page {
     .wrap .top-nav view {
       width: 50%;
       padding: 20rpx 0;
-      text-align: center; }
+      text-align: center;
+      color: #1b65ce; }
       .wrap .top-nav view.active {
         background: #1b65ce;
         color: #fff; }
 
-.title {
-  padding: 20rpx 10rpx;
-  border-bottom: 2rpx solid #1b65ce;
-  margin-top: 20rpx; }
-  .title.margin {
-    border-color: #fb565c; }
-    .title.margin text {
-      border-color: #fb565c;
-      color: #fb565c; }
-  .title text {
-    padding-left: 8rpx;
-    border-left: 6rpx solid #1b65ce;
-    color: #1b65ce; }
-
 .content {
   padding: 10rpx 20rpx; }
+  .content .title {
+    padding: 20rpx 10rpx;
+    border-bottom: 2rpx solid #1b65ce;
+    margin-top: 20rpx;
+    background: #fff; }
+    .content .title.margin {
+      border-color: #fb565c; }
+      .content .title.margin text {
+        border-color: #fb565c;
+        color: #fb565c; }
+    .content .title text {
+      padding-left: 8rpx;
+      border-left: 6rpx solid #1b65ce;
+      color: #1b65ce; }
   .content .item {
     background: #fff;
     border-bottom: 2rpx solid #ddd; }
@@ -53,32 +54,32 @@ page {
       padding: 20rpx 0; }
       .content .item .bottom .block {
         color: #666;
-        font-size: 32rpx;
+        font-size: 28rpx;
         display: flex;
         flex-direction: column;
         justify-content: space-around; }
         .content .item .bottom .block:nth-child(1) {
-          width: 30%;
+          width: 33%;
           text-align: center; }
           .content .item .bottom .block:nth-child(1) .intro {
-            font-size: 30rpx; }
+            font-size: 28rpx; }
           .content .item .bottom .block:nth-child(1) .number {
-            font-size: 44rpx;
+            font-size: 34rpx;
             color: #1b65ce; }
             .content .item .bottom .block:nth-child(1) .number text {
               font-size: 30rpx; }
         .content .item .bottom .block:nth-child(2) {
-          width: 45%;
-          border-right: 2rpx dotted #ddd; }
+          width: 42%;
+          border-right: 4rpx dotted #ddd; }
           .content .item .bottom .block:nth-child(2) .intro {
             line-height: 45rpx; }
             .content .item .bottom .block:nth-child(2) .intro text {
               color: #333;
               margin-left: 2px; }
             .content .item .bottom .block:nth-child(2) .intro:nth-child(1) text {
-              font-size: 40rpx; }
+              font-size: 30rpx; }
             .content .item .bottom .block:nth-child(2) .intro:nth-child(2) text {
-              font-size: 36rpx; }
+              font-size: 30rpx; }
             .content .item .bottom .block:nth-child(2) .intro:nth-child(3) text {
               font-size: 30rpx; }
         .content .item .bottom .block:nth-child(3) {
@@ -164,8 +165,8 @@ page {
         .list .bottom .block .intro text {
           color: #333; }
       .list .bottom .block:nth-child(1) {
-        width: 30%; }
+        width: 26%; }
       .list .bottom .block:nth-child(2) {
-        width: 35%; }
+        width: 37%; }
       .list .bottom .block:nth-child(3) {
-        width: 35%; }
+        width: 37%; }

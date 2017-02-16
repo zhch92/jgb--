@@ -1,35 +1,115 @@
-$themeColor:#f9bb18;
+$themeColor:#1b65ce;
 page {
     background: #ededed;
 }
 
-.menu {
-    display: flex;
-    justify-content: space-around;
-    border-top: 4rpx solid #dddddd;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 20rpx 0;
-    background:#fff;
-    .item {
-        width: 20%;
-        text-align: center;
-        .icon {
-            width: 50rpx;
-            height: 50rpx;
-            margin: 0 auto 10rpx;
-            background:red;
-        }
-        .text {
-            font-size: 30rpx;
+.wrap {
+    padding: 30rpx;
+    background: #fff;
+    .top-nav {
+        border: 2rpx solid $themeColor;
+        margin: 0 auto;
+        width: 70%;
+        display: flex;
+        border-radius: 3px;
+        view {
+            width: 50%;
+            padding: 20rpx 0;
+            text-align: center;
+            color: $themeColor;
+            &.active {
+                background: $themeColor;
+                color: #fff;
+            }
         }
     }
-    .wealth{
-        .icon{
-            background: url(../../images/account/index/wealth.png) no-repeat;
-            background-size: 100% 100%;
+}
+
+.trade-wrap {
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    margin: 20rpx;
+    background: #fff;
+    .title {
+        display: flex;
+        padding: 20rpx 20rpx;
+        border-bottom: 2px solid $themeColor;
+        color: $themeColor;
+        .text {
+            width: 60%;
+            font-size: 40rpx;
+            padding-left: 8rpx;
+            border-left: 2rpx solid $themeColor;
+        }
+        .choose-wrap {
+            width: 40%;
+            display: flex;
+            font-size: 32rpx;
+            view {
+                width: 50%;
+                text-align: center;
+                background: url(../../images/account/trade/seleted.png) no-repeat;
+                background-size: 35rpx 35rpx;
+                &.active {
+                    background: url(../../images/account/trade/nonSeleted.png) no-repeat;
+                    background-size: 35rpx 35rpx;
+                    color: #ddd;
+                }
+            }
+        }
+    }
+    .trade-record {
+        margin: 0 20rpx;
+        border-left: 2rpx solid #ddd;
+        padding: 10rpx 0;
+        &:last-child {
+            .bottom,
+            .earnings {
+                border-bottom: none;
+            }
+        }
+        .top {
+            display: flex;
+            justify-content: space-between;
+            margin-left: 28rpx;
+            margin-bottom: 20rpx;
+            font-size: 36rpx;
+            padding-top: 10rpx;
+            position: relative;
+            .circle {
+                position: absolute;
+                background:#fff;
+                width: 20rpx;
+                height: 20rpx;
+                border: 2rpx solid $themeColor;
+                border-radius: 100%;
+                top: 50%;
+                margin-top: -10rpx;
+                left: -37rpx;
+            }
+        }
+        .bottom {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 2rpx solid #ddd;
+            margin-left: 20rpx;
+            padding-bottom: 20rpx;
+            image {
+                width: 40rpx;
+                height: 40rpx;
+                margin-left: 8rpx;
+            }
+            text {
+                color: #fb565c;
+            }
+        }
+        .earnings {
+            border-bottom: 2rpx solid #ddd;
+            margin-left: 20rpx;
+            padding-bottom: 20rpx;
+            text {
+                color: #fb565c;
+            }
         }
     }
 }

@@ -1,41 +1,42 @@
-<view class="wrap point">
-    <view class="title">爱心值</view>
-    <view class="row">
-        <view class="text">我的爱心值</view>
-        <view class="number">0</view>
+    <view class="wrap point">
+        <view class="title">爱心值</view>
+        <view class="row">
+            <view class="text">我的爱心值</view>
+            <view class="number color-bule">{{point.totalPoint}}</view>
+        </view>
+        <view class="row">
+            <view class="text">可用爱心值</view>
+            <view class="number">{{point.availPoint}}</view>
+        </view>
+        <view class="row">
+            <view class="text">在途爱心值
+                <view>(
+                    <text>04月01日</text>可用)</view>
+            </view>
+            <view class="number">{{point.frozePoint}}</view>
+        </view>
     </view>
-    <view class="row">
-        <view class="text">可用爱心值</view>
-        <view class="number">0</view>
+    <view class="wrap wealth">
+        <view class="title">我的资产</view>
+        <view class="row">
+            <view class="text">总资产（元）</view>
+            <view class="number color-orange">{{wealth.totalAsset}}</view>
+        </view>
+        <view class="row">
+            <view class="text">昨日收益（元）</view>
+            <view class="number">{{wealth.nowdayIncome}}</view>
+        </view>
+        <view class="row">
+            <view class="text">累计收益（元）</view>
+            <view class="number">{{wealth.totalIncome}}</view>
+        </view>
     </view>
-    <view class="row">
-        <view class="text">我的爱心值</view>
-        <view class="number">0</view>
+    <view class="wealth-details">
+        <navigator url="../details/details">我的资产明细</navigator>
     </view>
-</view>
-
-<view class="wrap wealth">
-    <view class="title">我的资产</view>
-    <view class="row">
-        <view class="text">我的爱心值</view>
-        <view class="number">0</view>
+    <view class="explain">
+        <text>*</text>机构宝平台所显示的持有资产为经基金公司确认的资产，在途资产可以登录基金公司官网查看。</view>
+    <view class="logo">
+        <image src="../../images/account/wealth/logo-white.png"></image>
     </view>
-    <view class="row">
-        <view class="text">可用爱心值</view>
-        <view class="number">0</view>
-    </view>
-    <view class="row">
-        <view class="text">我的爱心值</view>
-        <view class="number">0</view>
-    </view>
-</view>
-<view class="wealth-details"><navigator>我的资产明细</navigator></view>
-<view class="explain"><text>*</text>机构宝平台所显示的持有资产为经基金公司确认的资产，在途资产可以登录基金公司官网查看。</view>
-<view class="logo"><image src="../../images/account/wealth/logo-white.png"></image></view>
-
-
-
-
-
-
 
