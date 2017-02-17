@@ -1,27 +1,42 @@
-$themeColor:#f9bb18;
+$themeColor:#1b65ce;
 page {
     background: #ededed;
-    font-size: 36rpx;
+    padding: 20rpx;
+    width: auto;
 }
 
-.row {
+.item {
     background: #fff;
-    border-bottom: 2rpx solid #ddd;
-    padding: 20rpx;
-    color: #333;
-    display: flex;
-    justify-content: space-between;
-    .text {
-        image {
-            width: 50rpx;
-            height: 40rpx;
-            vertical-align: middle;
+    border-radius: 5px;
+    margin-bottom: 20rpx;
+    .title {
+        font-size: 32rpx;
+        border-bottom: 2rpx solid $themeColor;
+        padding: 15rpx 0 15rpx 5rpx;
+        color: $themeColor;
+        text {
+            font-size: 36rpx;
         }
     }
-    .arrow {
-        image {
-            width: 27rpx;
-            height: 50rpx;
+    .wrap {
+        padding: 0 10rpx;
+        .row {
+            background: #fff;
+            font-size: 32rpx;
+            border-bottom: 2rpx dotted #ddd;
+            padding: 20rpx;
+            color: #333;
+            display: flex;
+            &:last-child{
+                border-bottom: none;
+            }
+            // justify-content: space-between;
+            .name {
+                width: 40%;
+            }
+            .text {
+                width: 60%;
+            }
         }
     }
 }

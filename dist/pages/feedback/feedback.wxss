@@ -1,22 +1,27 @@
 page {
   background: #ededed;
-  font-size: 36rpx; }
-
-.row {
-  background: #fff;
-  border-bottom: 2rpx solid #ddd;
   padding: 20rpx;
+  width: auto; }
+
+.title {
+  font-size: 32rpx;
   color: #333;
-  display: flex;
-  justify-content: space-between; }
-  .row .text image {
-    width: 50rpx;
-    height: 40rpx;
-    vertical-align: middle; }
-  .row .arrow image {
-    width: 27rpx;
-    height: 50rpx; }
+  margin-top: 10px;
+  margin-bottom: 10px; }
+  .title text {
+    font-size: 36rpx;
+    color: #1b65ce; }
+
+textarea {
+  width: auto;
+  padding: 10px;
+  border: 2rpx solid #ddd;
+  background: #fff;
+  border-radius: 3px;
+  height: 200px;
+  line-height: 20px;
+  font-size: 32rpx; }
 
 button {
   font-size: 36rpx;
-  margin-top: 150rpx; }
+  margin-top: 100rpx; }

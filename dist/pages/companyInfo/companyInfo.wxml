@@ -1,29 +1,78 @@
-<view class="row">
-    <view class="text">
-        <image src='../../images/account/system/acconut.png'></image> 账户信息</view>
-    <view class="arrow">
-        <image src="../../images/account/system/arrow.png"></image>
+<view class="item">
+    <view class="title">
+        <text>|企业信息</text>（编辑请登陆官方网站）</view>
+    <view class="wrap">
+        <view class="row">
+            <view class="name">企业全称</view>
+            <view class="text">顶峰资产</view>
+        </view>
+        <view class="row">
+            <view class="name">企业电话</view>
+            <view class="text">1234433</view>
+        </view>
+        <view class="row">
+            <view class="name">证件类型</view>
+            <view class="text">三证三码</view>
+        </view>
+        <view class="row">
+            <view class="name">营业执照号</view>
+            <view class="text">91310000078024723B</view>
+        </view>
+        <view class="row">
+            <view class="name">有效期</view>
+            <view class="text">asassa</view>
+        </view>
+        <view class="row">
+            <view class="name">税务登记证号</view>
+            <view class="text">asassa</view>
+        </view>
+        <view class="row">
+            <view class="name">组织结构代码证号</view>
+            <view class="text">asassa</view>
+        </view>
     </view>
 </view>
-<view class="row">
-    <view class="text">
-        <image src='../../images/account/system/company.png'></image> 企业信息</view>
-    <view class="arrow">
-        <image src="../../images/account/system/arrow.png"></image>
+<view class="item">
+    <view class="title">
+        <text>|法人信息</text>
+    </view>
+    <view class="wrap">
+        <view class="row">
+            <view class="name">法人姓名</view>
+            <view class="text">证件号码</view>
+        </view>
+        <view class="row">
+            <view class="name">证件号码</view>
+            <view class="text">1234433</view>
+        </view>
+        <view class="row">
+            <view class="name">有效期</view>
+            <view class="text">三证三码</view>
+        </view>
     </view>
 </view>
-<view class="row">
-    <view class="text">
-        <image src='../../images/account/system/modify.png'></image> 修改密码</view>
-    <view class="arrow">
-        <image src="../../images/account/system/arrow.png"></image>
+
+<view class="item">
+    <view class="title">
+        <text>|银行信息</text>
+    </view>
+    <view class="wrap">
+        <view class="row">
+            <view class="name">开户银行</view>
+            <view class="text">中国工商银行</view>
+        </view>
+        <view class="row">
+            <view class="name">开户银行支行分行</view>
+            <view class="text">1234433</view>
+        </view>
+        <view class="row">
+            <view class="name">银行户名</view>
+            <view class="text">三证三码</view>
+        </view>
+
+ <view class="row">
+            <view class="name">银行账户</view>
+            <view class="text">三证三码</view>
+        </view>
     </view>
 </view>
-<view class="row">
-    <view class="text">
-        <image src='../../images/account/system/feedback.png'></image> 意见反馈</view>
-    <view class="arrow">
-        <image src="../../images/account/system/arrow.png"></image>
-    </view>
-</view>
-<button type="warn" bindtap="loginOut">退出登录</button>

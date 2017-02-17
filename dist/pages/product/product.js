@@ -40,90 +40,17 @@
 /******/ 	return __webpack_require__(0);
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */
+/******/ ({
+
+/***/ 0:
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(1);
+	module.exports = __webpack_require__(81);
 
 
 /***/ },
-/* 1 */
-/***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
-
-	var util = __webpack_require__(2);
-
-	var app = getApp();
-
-	Page({
-	    data: {
-	        hiddenLoading: true,
-	        current: true,
-	        product: []
-	    },
-	    productSwitch: function productSwitch() {
-	        this.setData({
-	            current: !this.data.current
-	        });
-	    },
-	    onLoad: function onLoad() {
-	        var $this = this;
-	        $this.setData({
-	            hiddenLoading: false
-	        });
-	        wx.getStorage({
-	            key: 'JSESSIONID',
-	            success: function success(res) {
-	                wx.request({
-	                    url: 'http://10.10.10.204/jgb-web/v1/products',
-	                    header: {
-	                        'content-type': 'application/json',
-	                        'Cookie': 'JSESSIONID=' + res.data + ''
-	                    },
-	                    success: function success(res) {
-	                        var resData = res.data;
-	                        if (resData.errCode == '-1004') {
-	                            wx.redirectTo({ url: '../index/index' });
-	                        } else {
-	                            var oldData = resData.data;
-	                            var newData = oldData.map(function (obj) {
-	                                var rObj = {};
-	                                rObj['id'] = obj.id;
-	                                rObj['securityMarketType'] = obj.securityMarketType;
-	                                rObj['name'] = obj.name;
-	                                rObj['seventhYearYield'] = util.toPercent(obj.seventhYearYield);
-	                                rObj['yieldPerMillion'] = util.keepDecimal(obj.yieldPerMillion);
-	                                rObj['pointRate'] = util.tonIteger(obj.pointRate);
-	                                rObj['uptTime'] = util.dateFormat(obj.uptTime, 'yyyy.MM.dd');
-	                                rObj['valueDuration'] = obj.valueDuration;
-	                                rObj['fundAccessDate'] = util.dateFormat(obj.fundAccessDate, 'yyyy.MM.dd');
-	                                rObj['yieldStartDate'] = util.dateFormat(obj.yieldStartDate, 'yyyy.MM.dd');
-	                                rObj['yieldEndDate'] = util.dateFormat(obj.yieldEndDate, 'yyyy.MM.dd');
-	                                rObj['fundExitDate'] = util.dateFormat(obj.fundExitDate, 'yyyy.MM.dd');
-	                                return rObj;
-	                            });
-
-	                            $this.setData({
-	                                hiddenLoading: true,
-	                                product: newData
-	                            });
-	                        }
-	                    }
-	                });
-	            },
-	            fail: function fail() {
-	                // wx.switchTab({ url: '../wealth/wealth' });
-	                wx.redirectTo({ url: '../index/index' });
-	            }
-	        });
-	    }
-
-	});
-
-/***/ },
-/* 2 */
+/***/ 77:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -243,5 +170,82 @@
 	exports.keepDecimal = keepDecimal;
 	exports.tonIteger = tonIteger;
 
+/***/ },
+
+/***/ 81:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var util = __webpack_require__(77);
+
+	var app = getApp();
+
+	Page({
+	    data: {
+	        hiddenLoading: true,
+	        current: true,
+	        product: []
+	    },
+	    productSwitch: function productSwitch() {
+	        this.setData({
+	            current: !this.data.current
+	        });
+	    },
+	    onLoad: function onLoad() {
+	        var $this = this;
+	        $this.setData({
+	            hiddenLoading: false
+	        });
+	        wx.getStorage({
+	            key: 'JSESSIONID',
+	            success: function success(res) {
+	                wx.request({
+	                    url: 'http://10.10.10.204/jgb-web/v1/products',
+	                    header: {
+	                        'content-type': 'application/json',
+	                        'Cookie': 'JSESSIONID=' + res.data + ''
+	                    },
+	                    success: function success(res) {
+	                        var resData = res.data;
+	                        if (resData.errCode == '-1004') {
+	                            wx.redirectTo({ url: '../index/index' });
+	                        } else {
+	                            var oldData = resData.data;
+	                            var newData = oldData.map(function (obj) {
+	                                var rObj = {};
+	                                rObj['id'] = obj.id;
+	                                rObj['securityMarketType'] = obj.securityMarketType;
+	                                rObj['name'] = obj.name;
+	                                rObj['seventhYearYield'] = util.toPercent(obj.seventhYearYield);
+	                                rObj['yieldPerMillion'] = util.keepDecimal(obj.yieldPerMillion);
+	                                rObj['pointRate'] = util.tonIteger(obj.pointRate);
+	                                rObj['uptTime'] = util.dateFormat(obj.uptTime, 'yyyy.MM.dd');
+	                                rObj['valueDuration'] = obj.valueDuration;
+	                                rObj['fundAccessDate'] = util.dateFormat(obj.fundAccessDate, 'yyyy.MM.dd');
+	                                rObj['yieldStartDate'] = util.dateFormat(obj.yieldStartDate, 'yyyy.MM.dd');
+	                                rObj['yieldEndDate'] = util.dateFormat(obj.yieldEndDate, 'yyyy.MM.dd');
+	                                rObj['fundExitDate'] = util.dateFormat(obj.fundExitDate, 'yyyy.MM.dd');
+	                                return rObj;
+	                            });
+
+	                            $this.setData({
+	                                hiddenLoading: true,
+	                                product: newData
+	                            });
+	                        }
+	                    }
+	                });
+	            },
+	            fail: function fail() {
+	                // wx.switchTab({ url: '../wealth/wealth' });
+	                wx.redirectTo({ url: '../index/index' });
+	            }
+	        });
+	    }
+
+	});
+
 /***/ }
-/******/ ]);
+
+/******/ });

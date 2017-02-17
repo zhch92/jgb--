@@ -1,19 +1,21 @@
 {
     "pages": [
-        "pages/feedback/feedback",
+          "pages/system/system",
+
+        "pages/companyInfo/companyInfo",
         
+        "pages/changePwd/changePwd",
+
+        "pages/feedback/feedback",
+
         "pages/accountInfo/accountInfo",
 
-        "pages/system/system",
-
+      
         "pages/point/point",
         "pages/product/product",
         "pages/trade/trade",
         "pages/wealth/wealth",
 
-        "pages/accountInfo/accountInfo",
-        "pages/companyInfo/companyInfo",
-        "pages/changePwd/changePwd",
 
 
 

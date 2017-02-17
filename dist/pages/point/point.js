@@ -40,100 +40,17 @@
 /******/ 	return __webpack_require__(0);
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */
+/******/ ({
+
+/***/ 0:
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(1);
+	module.exports = __webpack_require__(80);
 
 
 /***/ },
-/* 1 */
-/***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
-
-	var util = __webpack_require__(2);
-
-	var app = getApp();
-
-	Page({
-	    data: {
-	        point: { totalPoint: 0, availPoint: 0.1, frozePoint: 0, availDate: 0 },
-	        pointList: []
-	    },
-	    onLoad: function onLoad() {
-	        var $this = this;
-	        wx.getStorage({
-	            key: 'JSESSIONID',
-	            success: function success(res) {
-	                wx.request({
-	                    url: 'http://10.10.10.204/jgb-web/v1/points/point',
-	                    header: {
-	                        'content-type': 'application/json',
-	                        'Cookie': 'JSESSIONID=' + res.data + ''
-	                    },
-	                    success: function success(res) {
-	                        var resData = res.data;
-	                        if (resData.errCode == '-1004') {
-	                            wx.redirectTo({ url: '../index/index' });
-	                        } else {
-	                            var oldData = resData.data;
-	                            var newData = {};
-	                            newData['totalPoint'] = util.thousands(oldData.totalPoint);
-	                            newData['availPoint'] = util.thousands(oldData.availPoint);
-	                            newData['frozePoint'] = util.thousands(oldData.frozePoint);
-	                            newData['availDate'] = util.dateFormat(oldData.availDate, 'MM月dd日');
-	                            $this.setData({
-	                                point: newData
-	                            });
-	                        }
-	                    }
-	                });
-	                wx.request({
-	                    url: 'http://10.10.10.204/jgb-web/v1/points',
-	                    header: {
-	                        'content-type': 'application/json',
-	                        'Cookie': 'JSESSIONID=' + res.data + ''
-	                    },
-	                    data: {
-	                        type: -1,
-	                        pageNo: 1
-	                    },
-	                    success: function success(res) {
-	                        var resData = res.data;
-	                        if (resData.errCode == '-1004') {
-	                            wx.redirectTo({ url: '../index/index' });
-	                        } else {
-	                            var oldData = resData.data.resultList;
-	                            var newData = oldData.map(function (obj) {
-	                                var rObj = {};
-	                                rObj['time'] = util.dateFormat(obj.time, 'yyyy-MM-dd');
-	                                rObj['actionDesc'] = obj.actionDesc;
-	                                rObj['investorName'] = obj.investorName;
-	                                rObj['point'] = obj.point;
-	                                rObj['productName'] = obj.productName;
-	                                rObj['memo'] = util.formatMoney(obj.memo);
-	                                return rObj;
-	                            });
-	                            $this.setData({
-	                                pointList: newData
-	                            });
-	                        }
-	                    }
-	                });
-	            },
-	            fail: function fail() {
-	                // wx.switchTab({ url: '../wealth/wealth' });
-	                wx.redirectTo({ url: '../index/index' });
-	            }
-	        });
-	    }
-
-	});
-
-/***/ },
-/* 2 */
+/***/ 77:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -253,5 +170,92 @@
 	exports.keepDecimal = keepDecimal;
 	exports.tonIteger = tonIteger;
 
+/***/ },
+
+/***/ 80:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var util = __webpack_require__(77);
+
+	var app = getApp();
+
+	Page({
+	    data: {
+	        point: { totalPoint: 0, availPoint: 0.1, frozePoint: 0, availDate: 0 },
+	        pointList: []
+	    },
+	    onLoad: function onLoad() {
+	        var $this = this;
+	        wx.getStorage({
+	            key: 'JSESSIONID',
+	            success: function success(res) {
+	                wx.request({
+	                    url: 'http://10.10.10.204/jgb-web/v1/points/point',
+	                    header: {
+	                        'content-type': 'application/json',
+	                        'Cookie': 'JSESSIONID=' + res.data + ''
+	                    },
+	                    success: function success(res) {
+	                        var resData = res.data;
+	                        if (resData.errCode == '-1004') {
+	                            wx.redirectTo({ url: '../index/index' });
+	                        } else {
+	                            var oldData = resData.data;
+	                            var newData = {};
+	                            newData['totalPoint'] = util.thousands(oldData.totalPoint);
+	                            newData['availPoint'] = util.thousands(oldData.availPoint);
+	                            newData['frozePoint'] = util.thousands(oldData.frozePoint);
+	                            newData['availDate'] = util.dateFormat(oldData.availDate, 'MM月dd日');
+	                            $this.setData({
+	                                point: newData
+	                            });
+	                        }
+	                    }
+	                });
+	                wx.request({
+	                    url: 'http://10.10.10.204/jgb-web/v1/points',
+	                    header: {
+	                        'content-type': 'application/json',
+	                        'Cookie': 'JSESSIONID=' + res.data + ''
+	                    },
+	                    data: {
+	                        type: -1,
+	                        pageNo: 1
+	                    },
+	                    success: function success(res) {
+	                        var resData = res.data;
+	                        if (resData.errCode == '-1004') {
+	                            wx.redirectTo({ url: '../index/index' });
+	                        } else {
+	                            var oldData = resData.data.resultList;
+	                            var newData = oldData.map(function (obj) {
+	                                var rObj = {};
+	                                rObj['time'] = util.dateFormat(obj.time, 'yyyy-MM-dd');
+	                                rObj['actionDesc'] = obj.actionDesc;
+	                                rObj['investorName'] = obj.investorName;
+	                                rObj['point'] = obj.point;
+	                                rObj['productName'] = obj.productName;
+	                                rObj['memo'] = util.formatMoney(obj.memo);
+	                                return rObj;
+	                            });
+	                            $this.setData({
+	                                pointList: newData
+	                            });
+	                        }
+	                    }
+	                });
+	            },
+	            fail: function fail() {
+	                // wx.switchTab({ url: '../wealth/wealth' });
+	                wx.redirectTo({ url: '../index/index' });
+	            }
+	        });
+	    }
+
+	});
+
 /***/ }
-/******/ ]);
+
+/******/ });

@@ -40,92 +40,17 @@
 /******/ 	return __webpack_require__(0);
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */
+/******/ ({
+
+/***/ 0:
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(1);
+	module.exports = __webpack_require__(86);
 
 
 /***/ },
-/* 1 */
-/***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
-
-	var util = __webpack_require__(2);
-
-	var app = getApp();
-
-	Page({
-	    data: {
-	        details: false,
-	        point: { totalPoint: 0, availPoint: 0, frozePoint: 0, availDate: 0 },
-	        wealth: { orgNo: "", totalAsset: 0, nowdayIncome: 0, totalIncome: 0 }
-	    },
-	    onLoad: function onLoad() {
-	        var $this = this;
-	        wx.getStorage({
-	            key: 'JSESSIONID',
-	            success: function success(res) {
-	                wx.request({
-	                    url: 'http://10.10.10.204/jgb-web/v1/points/point',
-	                    header: {
-	                        'content-type': 'application/json',
-	                        'Cookie': 'JSESSIONID=' + res.data + ''
-	                    },
-	                    success: function success(res) {
-	                        var resData = res.data;
-	                        if (resData.errCode == '-1004') {
-	                            wx.redirectTo({ url: '../index/index' });
-	                        } else {
-	                            var oldData = resData.data;
-	                            var newData = {};
-	                            newData['totalPoint'] = util.thousands(oldData.totalPoint);
-	                            newData['availPoint'] = util.thousands(oldData.availPoint);
-	                            newData['frozePoint'] = util.thousands(oldData.frozePoint);
-	                            newData['availDate'] = util.dateFormat(oldData.availDate, 'MM月dd日');
-	                            $this.setData({
-	                                point: newData
-	                            });
-	                        }
-	                    }
-	                });
-
-	                wx.request({
-	                    url: 'http://10.10.10.204/jgb-web/v1/wealth/taAcctDetail',
-	                    header: {
-	                        'content-type': 'application/json',
-	                        'Cookie': 'JSESSIONID=' + res.data + ''
-	                    },
-	                    success: function success(res) {
-	                        var resData = res.data;
-	                        if (resData.errCode == '-1004') {
-	                            wx.redirectTo({ url: '../index/index' });
-	                        } else {
-	                            var oldData = resData.data;
-	                            var newData = {};
-	                            newData['totalAsset'] = util.formatMoney(oldData.totalAsset);
-	                            newData['nowdayIncome'] = util.formatMoney(oldData.nowdayIncome);
-	                            newData['totalIncome'] = util.formatMoney(oldData.totalIncome);
-	                            $this.setData({
-	                                wealth: newData
-	                            });
-	                        }
-	                    }
-	                });
-	            },
-	            fail: function fail() {
-	                // wx.switchTab({ url: '../wealth/wealth' });
-	                wx.redirectTo({ url: '../index/index' });
-	            }
-	        });
-	    }
-
-	});
-
-/***/ },
-/* 2 */
+/***/ 77:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -245,5 +170,84 @@
 	exports.keepDecimal = keepDecimal;
 	exports.tonIteger = tonIteger;
 
+/***/ },
+
+/***/ 86:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var util = __webpack_require__(77);
+
+	var app = getApp();
+
+	Page({
+	    data: {
+	        details: false,
+	        point: { totalPoint: 0, availPoint: 0, frozePoint: 0, availDate: 0 },
+	        wealth: { orgNo: "", totalAsset: 0, nowdayIncome: 0, totalIncome: 0 }
+	    },
+	    onLoad: function onLoad() {
+	        var $this = this;
+	        wx.getStorage({
+	            key: 'JSESSIONID',
+	            success: function success(res) {
+	                wx.request({
+	                    url: 'http://10.10.10.204/jgb-web/v1/points/point',
+	                    header: {
+	                        'content-type': 'application/json',
+	                        'Cookie': 'JSESSIONID=' + res.data + ''
+	                    },
+	                    success: function success(res) {
+	                        var resData = res.data;
+	                        if (resData.errCode == '-1004') {
+	                            wx.redirectTo({ url: '../index/index' });
+	                        } else {
+	                            var oldData = resData.data;
+	                            var newData = {};
+	                            newData['totalPoint'] = util.thousands(oldData.totalPoint);
+	                            newData['availPoint'] = util.thousands(oldData.availPoint);
+	                            newData['frozePoint'] = util.thousands(oldData.frozePoint);
+	                            newData['availDate'] = util.dateFormat(oldData.availDate, 'MM月dd日');
+	                            $this.setData({
+	                                point: newData
+	                            });
+	                        }
+	                    }
+	                });
+
+	                wx.request({
+	                    url: 'http://10.10.10.204/jgb-web/v1/wealth/taAcctDetail',
+	                    header: {
+	                        'content-type': 'application/json',
+	                        'Cookie': 'JSESSIONID=' + res.data + ''
+	                    },
+	                    success: function success(res) {
+	                        var resData = res.data;
+	                        if (resData.errCode == '-1004') {
+	                            wx.redirectTo({ url: '../index/index' });
+	                        } else {
+	                            var oldData = resData.data;
+	                            var newData = {};
+	                            newData['totalAsset'] = util.formatMoney(oldData.totalAsset);
+	                            newData['nowdayIncome'] = util.formatMoney(oldData.nowdayIncome);
+	                            newData['totalIncome'] = util.formatMoney(oldData.totalIncome);
+	                            $this.setData({
+	                                wealth: newData
+	                            });
+	                        }
+	                    }
+	                });
+	            },
+	            fail: function fail() {
+	                // wx.switchTab({ url: '../wealth/wealth' });
+	                wx.redirectTo({ url: '../index/index' });
+	            }
+	        });
+	    }
+
+	});
+
 /***/ }
-/******/ ]);
+
+/******/ });

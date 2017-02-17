@@ -1,21 +1,23 @@
 page {
   background: #ededed;
-  font-size: 36rpx; }
+  padding: 20rpx;
+  width: auto; }
 
 .row {
-  background: #fff;
-  border-bottom: 2rpx solid #ddd;
-  padding: 20rpx;
-  color: #333;
   display: flex;
-  justify-content: space-between; }
-  .row .text image {
-    width: 50rpx;
-    height: 40rpx;
-    vertical-align: middle; }
-  .row .arrow image {
-    width: 27rpx;
-    height: 50rpx; }
+  padding: 10rpx 0;
+  font-size: 36rpx;
+  margin-bottom: 10px; }
+  .row:first-child {
+    margin-top: 10px; }
+  .row .text {
+    width: 25%;
+    line-height: 1.4rem; }
+  .row .ipt {
+    border-bottom: 2rpx solid #ddd;
+    width: 75%; }
+    .row .ipt input {
+      color: #666; }
 
 button {
   font-size: 36rpx;

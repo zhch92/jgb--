@@ -45,12 +45,12 @@
 /***/ 0:
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(75);
+	module.exports = __webpack_require__(79);
 
 
 /***/ },
 
-/***/ 73:
+/***/ 77:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -94,7 +94,11 @@
 	        return '';
 	    }
 	}
-
+	/**
+	* 数字千分位
+	* @param {number} value - 数字
+	* @returns {string}
+	*/
 	function thousands(value) {
 	    if (!isNaN(value) && value != null) {
 	        var s = parseFloat((value + '').replace(/[^\d.-]/g, '')) + '';
@@ -108,19 +112,72 @@
 	        return '0';
 	    }
 	}
+	/**
+	 * 数字千分位保留两位小数点
+	 * @param {number} value - 数字
+	 * @returns {string}
+	 */
+
+	function formatMoney(value) {
+	    if (!isNaN(value) && value != null) {
+	        var num = parseFloat(value).toFixed(2);
+	        var regx = /(\d{1,3})(?=(\d{3})+(?:\.))/g;
+	        return num.replace(regx, "$1,");
+	    } else {
+	        return '0.00';
+	    }
+	}
+	/**
+	 * 小数点转百分号
+	 * @param {number} value - 小数点
+	 * @returns {string}
+	 */
+	function toPercent(value) {
+	    var newValue = '',
+	        digit = 4;
+
+	    !isNaN(value) && value != null ? newValue = (value * 100).toFixed(digit) : newValue = 0 .toFixed(digit) + '%';
+	    return newValue;
+	}
+
+	function tonIteger(value) {
+	    var newValue = '',
+	        digit = 0;
+
+	    !isNaN(value) && value != null ? newValue = (value * 100000000).toFixed(digit) : newValue = 0 .toFixed(digit);
+	    return newValue;
+	}
+
+	/**
+	 * 小数点后保留固定位数
+	 * @param {number} value - 数字
+	 * @returns {string}
+	 */
+	function keepDecimal(value) {
+	    var newValue = '',
+	        digit = 4;
+
+	    !isNaN(value) && value != null ? newValue = value.toFixed(digit) : newValue = 0 .toFixed(digit);
+	    return newValue;
+	}
+
 	module.exports.hint = hint;
 	exports.setTitle = setTitle;
 	exports.dateFormat = dateFormat;
 	exports.thousands = thousands;
+	exports.formatMoney = formatMoney;
+	exports.toPercent = toPercent;
+	exports.keepDecimal = keepDecimal;
+	exports.tonIteger = tonIteger;
 
 /***/ },
 
-/***/ 75:
+/***/ 79:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var util = __webpack_require__(73);
+	var util = __webpack_require__(77);
 	var app = getApp();
 
 	Page({

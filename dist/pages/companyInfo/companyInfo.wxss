@@ -1,21 +1,34 @@
 page {
   background: #ededed;
-  font-size: 36rpx; }
-
-.row {
-  background: #fff;
-  border-bottom: 2rpx solid #ddd;
   padding: 20rpx;
-  color: #333;
-  display: flex;
-  justify-content: space-between; }
-  .row .text image {
-    width: 50rpx;
-    height: 40rpx;
-    vertical-align: middle; }
-  .row .arrow image {
-    width: 27rpx;
-    height: 50rpx; }
+  width: auto; }
+
+.item {
+  background: #fff;
+  border-radius: 5px;
+  margin-bottom: 20rpx; }
+  .item .title {
+    font-size: 32rpx;
+    border-bottom: 2rpx solid #1b65ce;
+    padding: 15rpx 0 15rpx 5rpx;
+    color: #1b65ce; }
+    .item .title text {
+      font-size: 36rpx; }
+  .item .wrap {
+    padding: 0 10rpx; }
+    .item .wrap .row {
+      background: #fff;
+      font-size: 32rpx;
+      border-bottom: 2rpx dotted #ddd;
+      padding: 20rpx;
+      color: #333;
+      display: flex; }
+      .item .wrap .row:last-child {
+        border-bottom: none; }
+      .item .wrap .row .name {
+        width: 40%; }
+      .item .wrap .row .text {
+        width: 60%; }
 
 button {
   font-size: 36rpx;
